@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Фильмы - Awei</title>
+    <link rel="stylesheet" href="style.css"> <!-- Подключаем файл стилей -->
+</head>
+<body>
+    <!-- Заголовок сайта с названием -->
+    <header>
+        <h1>Awei</h1>
+    </header>
+
+    <!-- Выбор фильма -->
+    <div class="movie-choice">
+        <h2>Выберите фильм для просмотра:</h2>
+        <button class="btn" onclick="showMovie(1)">Кто Я</button>
+        <button class="btn" onclick="showMovie(2)">Цикада 3301: Квест для Хакера</button>
+    </div>
+
+    <!-- Страница с фильмами -->
+    <div class="movie-info" id="movie-1">
+        <h2>Кто Я</h2>
+        <p>Описание фильма: Это фильм о группе молодых людей, которые сталкиваются с выбором, кто они, и что они могут быть в этом мире.</p>
+        
+        <!-- Вставка YouTube плеера с первой ссылкой -->
+        <div class="video-container">
+            <iframe width="100%" height="315" src="https://www.youtube.com/embed/xggqxQptPW8?autoplay=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <div class="movie-info" id="movie-2" style="display: none;">
+        <h2>Цикада 3301: Квест для Хакера</h2>
+        <p>Описание фильма: Этот документальный фильм расскажет о загадочной игре Цикада 3301, которая привлекла внимание тысяч хакеров по всему миру. Фильм исследует, что стояло за этой уникальной загадкой, и пытается разгадать тайны, связанные с этим квестом для хакеров.</p>
+        
+        <!-- Вставка YouTube плеера со второй ссылкой -->
+        <div class="video-container">
+            <iframe width="100%" height="315" src="https://www.youtube.com/embed/Z3SSf4p51vs?autoplay=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <script>
+        // Функция для отображения выбранного фильма
+        function showMovie(movieId) {
+            // Скрыть оба фильма
+            document.getElementById('movie-1').style.display = 'none';
+            document.getElementById('movie-2').style.display = 'none';
+
+            // Показать выбранный фильм
+            document.getElementById('movie-' + movieId).style.display = 'block';
+        }
+    </script>
+</body>
+</html>
